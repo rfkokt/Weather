@@ -8,6 +8,7 @@ import {
   // IoMdThunderstorm,
   IoMdCloudy,
 } from "react-icons/io";
+import { TbMist } from "react-icons/tb";
 import SideBar from "../sidebar";
 
 export default function Home() {
@@ -22,6 +23,11 @@ export default function Home() {
         bgImg: "bg-cloudy",
         name: "Cloudy",
       });
+    } else if (weather === "Mist") {
+      setDataWeather({
+        bgImg: "bg-mist",
+        name: "Mist",
+      });
     } else {
       setDataWeather({
         bgImg: "bg-rainy",
@@ -33,7 +39,7 @@ export default function Home() {
   return (
     <>
       <div
-        className={`flex bg-rainy bg-cover ${dataWeather?.bgImg} justify-between text-white`}
+        className={`flex animate-slides bg-cover ${dataWeather?.bgImg} justify-between text-white`}
       >
         <div className="px-32 py-24">
           {/* Header */}
@@ -55,6 +61,7 @@ export default function Home() {
               <p>
                 {dataWeather?.name === "Cloudy" && <IoMdCloudy size={50} />}
                 {dataWeather?.name === "Rainy" && <IoMdRainy size={50} />}
+                {dataWeather?.name === "Mist" && <TbMist size={50} />}
               </p>
               <p>{dataWeather?.name}</p>
             </div>

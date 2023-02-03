@@ -9,9 +9,25 @@ module.exports = withMT({
         transparan: "rgba(0, 0, 0, 0.6)",
         col_rainy: "#949c9c",
       },
+      animation: {
+        slides: "slide 1s ease 0s 1 normal forwards;",
+      },
+      keyframes: {
+        slide: {
+          "0%": {
+            opacity: 0,
+            transform: "translateX(-250px)",
+          },
+          "100%": {
+            opacity: 1,
+            transform: "translateX(0)",
+          },
+        },
+      },
       backgroundImage: {
         rainy: "url('/src/assets/img/rainy.jpg')",
         cloudy: "url('/src/assets/img/cloudy.jpg')",
+        mist: "url('/src/assets/img/mist.jpg')",
       },
     },
   },

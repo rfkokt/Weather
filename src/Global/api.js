@@ -1,7 +1,7 @@
 import axios from "axios";
 
-const api_prod = process.env.REACT_APP_API_ID;
-const api = process.env.REACT_APP_API_ID;
+const api_prod = process.env.REACT_APP_API_ID_PROD;
+// const api = process.env.REACT_APP_API_ID;
 
 const instance = axios.create({
   baseURL: "https://openweathermap.org/data/2.5/",
@@ -14,6 +14,7 @@ export const getCity = async (city) => {
       q: city,
       appid: api_prod,
       units: "metric",
+      lang: "id",
     },
   });
   return res;
@@ -23,8 +24,9 @@ export const getLatlong = async (lat, lon) => {
     params: {
       lat,
       lon,
-      appid: api,
+      appid: api_prod,
       units: "metric",
+      lang: "id",
     },
   });
   return res;
