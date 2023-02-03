@@ -25,9 +25,9 @@ module.exports = withMT({
         },
       },
       backgroundImage: {
-        rainy: "url('/src/assets/img/rainy.jpg')",
-        cloudy: "url('/src/assets/img/cloudy.jpg')",
-        mist: "url('/src/assets/img/mist.jpg')",
+        rainy: "url('/src/assets/img/rainy.webp')",
+        cloudy: "url('/src/assets/img/cloudy.webp')",
+        mist: "url('/src/assets/img/mist.webp')",
       },
     },
   },
